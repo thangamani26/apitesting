@@ -167,6 +167,9 @@ venv.bak/
 # mkdocs documentation
 /site
 
+#reports
+/reports
+
 # mypy
 .mypy_cache/
 .dmypy.json
@@ -211,6 +214,7 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
 
 # Streamlit
 .streamlit/secrets.toml
