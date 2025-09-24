@@ -10,7 +10,7 @@ request_headers = {
 
 request_body = {
     "name": "Rep. Tejas Kaniyar2323",
-    "email": "sjljfslwr324423@legros.example",
+    "email": "wqqwerodljerejl34@legros.example",
     "gender": "male",
     "status": "inactive"
 }
@@ -27,7 +27,7 @@ response_body = response.json()
 print(response_body['id'])
 
 id = response_body['id']
-url = f"https://gorest.co.in/public/v2/users/{id}"
+url = "https://gorest.co.in/public/v2/users/"+str(id)
 
 # Exercise1 Part 2
 print(url)
