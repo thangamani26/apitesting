@@ -45,3 +45,30 @@ def test_create_activity(apis):
     print(response.json())
     assert response.status_code == 200
     assert response.json()['id'] == 50
+
+# This is the test case for Update Activity API Success
+
+
+def test_update_activity(apis):
+
+    request_body = {
+        "id": 50,
+        "title": "Updated Learning API Testing",
+        "dueDate": "2025-09-24T07:22:03.17Z",
+        "completed": True
+    }
+
+    response = apis.put_activity(50, request_body)
+    print(response.status_code)
+    print(response.json())
+    assert response.status_code == 200
+    assert response.json()['id'] == 50
+    assert response.json()['title'] == "Updated Learning API Testing"
+
+
+def test_delete_activity(apis):
+    response = apis.delete_activity(50)
+    print(response.status_code)
+    print(response.text)
+    assert response.status_code == 200
+    assert response.text == ""

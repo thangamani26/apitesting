@@ -23,5 +23,5 @@ class APIS:
     def put_activity(self, activity_id, body):
         return requests.put(f"{self.BASE_URL}/{activity_id}", headers=self.headers, json=body)
 
-    def delete_actity(self, activity_id):
+    def delete_activity(self, activity_id):
         return requests.delete(f"{self.BASE_URL}/{activity_id}", headers=self.headers)
