@@ -1,5 +1,7 @@
 import pytest
 from datetime import datetime
+import json
+import os
 # this is special configuration file used by pytest
 # it allows you to define
 # Fixtures that are shared across multiple test
@@ -18,3 +20,11 @@ def setup_teardown():
     print("setup: Initilizing resources")
     yield
     print("Teardown: Releasing Resources")
+
+
+@pytest.fixture
+def load_test_data():
+    file_path = os.path.join(os.path.dirname(
+        __file__), 'data', 'test_data.json')
+    with open(file_path) as file:
+        return json.load(file)
