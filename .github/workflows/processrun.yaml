@@ -15,11 +15,11 @@ jobs:
         uses: action/checkout@v3
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v3
       - name : required installs
         run: |
           python -m pip install --upgrade pip
-          pip install -r ./apitesting/requirements.txt
+          pip install -r requirements.txt
       - name: run the tests
         run: |
           pytest
